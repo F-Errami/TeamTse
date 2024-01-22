@@ -13,6 +13,6 @@ public class Team {
     @Id @GeneratedValue
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "team")
-    List<Player> players;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Player> players;
 }

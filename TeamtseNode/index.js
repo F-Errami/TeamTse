@@ -10,8 +10,8 @@ const handleError = (error) => {
 // Function to test TeamController endpoints
 const testTeamController = async () => {
   try {
-    // Create a team
-    const teamResponse = await axios.post(`${baseURL}/teams`, { name: 'Test Team' });
+    // Create a team with players
+    const teamResponse = await axios.post(`${baseURL}/teams`, { name: 'Test Team', players: [{ name :'player 1'}, { name :'player 2'}] });
     const teamId = teamResponse.data.id;
 
     console.log('Team created:', teamResponse.data);
