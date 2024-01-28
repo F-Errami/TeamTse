@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const baseURL = 'http://localhost:8080'; 
 
-// Function to handle errors
+
 const handleError = (error) => {
   console.error('Error:', error.response ? error.response.data : error.message);
 };
